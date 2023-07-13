@@ -1,9 +1,7 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, React, useContext } from "react";
 import UploadButton from "../upload-button/upload-button"
 import { Link } from 'react-router-dom'
 import getListPokemon from "../../services/get-list-pokemon";
-import { useContext } from "react";
 import { ThemeContext } from "../../contexts/theme-context";
 import { styled } from "styled-components";
 

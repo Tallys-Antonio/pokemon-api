@@ -1,8 +1,7 @@
 import { useParams } from 'react-router-dom'
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import getPokemons from '../../services/get-pokemons';
 import getAbilities from '../../services/get-abilities';
-import { useContext } from 'react';
 import { ThemeContext } from '../../contexts/theme-context';
 import { styled } from 'styled-components';
 
@@ -81,7 +80,7 @@ const Pokemon = () => {
 
                     <DivAbilities style={{ borderColor: theme.borderCard, backgroundColor: theme.backgroundCard }}>
                         <TitleAbilities >abilites:</TitleAbilities>
-                        <UlAbilities>
+                        <ul>
                             {
                                 pokemon.pokemonData.abilities?.map((item, index) => {
                                     return (
@@ -92,7 +91,7 @@ const Pokemon = () => {
                                     )
                                 })
                             }
-                        </UlAbilities>
+                        </ul>
                     </DivAbilities>
                 </DivInfo>
             </DivContainer>
@@ -243,10 +242,6 @@ const DivAbilities = styled.div`
 const TitleAbilities = styled.h2`
     font-weight: 700;
     font-size: 19px;
-`
-
-const UlAbilities = styled.ul`
-
 `
 
 const LiAbilities = styled.li`

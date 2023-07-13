@@ -24,6 +24,7 @@ const Header = () => {
         </HeaderMain>
     )
 }
+
 const HeaderMain = styled.header`
     width: 100vw;
     background-color: red;
