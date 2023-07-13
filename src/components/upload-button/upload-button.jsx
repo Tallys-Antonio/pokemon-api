@@ -19,6 +19,7 @@ const ButtonUpload = styled.button`
 
     &:hover {
         transform: scale(1.12);
+        cursor: pointer;
     }
 `
 
